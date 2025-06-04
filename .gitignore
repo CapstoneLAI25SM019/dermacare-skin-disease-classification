@@ -31,21 +31,23 @@ lerna-debug.log*
 # FRONTEND (FE) IGNORES
 # =========================
 
-FE/node_modules/
-FE/dist/
-FE/build/
-FE/.env
-FE/.next/
-FE/.turbo/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.next/
+frontend/.turbo/
 
 # =========================
 # BACKEND (BE) IGNORES
 # =========================
 
-BE/__pycache__/
-BE/*.pyc
-BE/.env
-BE/env/
-BE/venv/
-BE/.mypy_cache/
-BE/.pytest_cache/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/env/
+backend/venv/
+backend/.mypy_cache/
+backend/.pytest_cache/
+
+
