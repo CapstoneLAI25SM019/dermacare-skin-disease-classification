@@ -1,0 +1,51 @@
+# =========================
+# GLOBAL IGNORES
+# =========================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment
+*.local
+
+# Editor & IDE settings
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Visual Studio-specific files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =========================
+# FRONTEND (FE) IGNORES
+# =========================
+
+FE/node_modules/
+FE/dist/
+FE/build/
+FE/.env
+FE/.next/
+FE/.turbo/
+
+# =========================
+# BACKEND (BE) IGNORES
+# =========================
+
+BE/__pycache__/
+BE/*.pyc
+BE/.env
+BE/env/
+BE/venv/
+BE/.mypy_cache/
+BE/.pytest_cache/

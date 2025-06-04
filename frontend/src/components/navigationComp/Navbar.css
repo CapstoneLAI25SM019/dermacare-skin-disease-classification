@@ -1,0 +1,111 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #e6f0ff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Link Styles */
+.nav-links a {
+    text-decoration: none !important;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    outline: none;
+}
+
+/* Hover Effect */
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #003f7f;
+    border-bottom-color: #003f7f;
+    text-decoration: none !important;
+}
+
+.nav-links a.active {
+    color: #003f7f;
+    border-bottom: 2px solid #003f7f;
+    padding-bottom: 4px;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* Responsive Styles for screens <= 768px */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        flex-direction: column;
+        width: 150px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        border-radius: 5px;
+        z-index: 101;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
