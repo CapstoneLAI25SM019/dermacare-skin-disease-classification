@@ -1,4 +1,4 @@
-import kutilContent from '../../contents/articleContent/kutilContent';
+import kutilContent from '../../contents/articleContent/kutilContent.js';
 
 const Kutil = () => {
     return (
