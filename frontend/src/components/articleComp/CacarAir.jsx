@@ -1,5 +1,4 @@
-import React from "react";
-import cacarAirContent from "../../contents/articleContent/cacarAirContent";
+import cacarAirContent from "../../contents/articleContent/cacarAirContent.js";
 
 const CacarAir = () => {
   return (
