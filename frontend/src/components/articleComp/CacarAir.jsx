@@ -1,4 +1,4 @@
-import cacarAirContent from "../../contents/articleContent/cacarAirContent.js";
+import cacarAirContent from "../../contents/articleContent/CacarAirContent.js";
 
 const CacarAir = () => {
   return (
