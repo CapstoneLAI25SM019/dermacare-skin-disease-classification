@@ -1,4 +1,4 @@
-import vitiligoContent from "../../contents/articleContent/vitiligoContent";
+import vitiligoContent from "../../contents/articleContent/VitiligoContent.js";
 
 const Vitiligo = () => {
   return (

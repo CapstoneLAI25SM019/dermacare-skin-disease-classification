@@ -1,4 +1,4 @@
-import psoriasisContent from "../../contents/articleContent/psoriasisContent";
+import psoriasisContent from "../../contents/articleContent/PsoriasisContent.js";
 
 const Psoriasis = () => {
   return (

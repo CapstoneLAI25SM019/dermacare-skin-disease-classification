@@ -1,4 +1,4 @@
-import eczemaContent from "../../contents/articleContent/EczemaContent";
+import eczemaContent from "../../contents/articleContent/EczemaContent.js";
 
 const Eczema = () => {
     return (

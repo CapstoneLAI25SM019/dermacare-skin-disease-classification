@@ -1,4 +1,4 @@
-import jerawatContent from "../../contents/articleContent/JerawatContent";
+import jerawatContent from "../../contents/articleContent/JerawatContent.js";
 
 const Jerawat = () => {
   return (

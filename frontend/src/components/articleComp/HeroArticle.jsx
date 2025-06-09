@@ -1,4 +1,4 @@
-import heroArticleContent from '../../contents/articleContent/HeroArticle';
+import heroArticleContent from '../../contents/articleContent/HeroArticle.js';
 import HeroSVG from '../../assets/hero-article.svg';
 
 const HeroArticle = () => {

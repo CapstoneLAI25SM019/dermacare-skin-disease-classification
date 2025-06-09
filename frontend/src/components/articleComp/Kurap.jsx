@@ -1,4 +1,4 @@
-import kurapContent from '../../contents/articleContent/kurapContent';
+import kurapContent from '../../contents/articleContent/KurapContent.js';
 
 const Kurap = () => {
     return (

@@ -1,4 +1,4 @@
-import lupusContent from '../../contents/articleContent/lupusContent';
+import lupusContent from '../../contents/articleContent/LupusContent.js';
 
 const Lupus = () => {
     return (
