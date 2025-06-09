@@ -2,7 +2,6 @@ import AboutUsHero from "../components/aboutUsComp/aboutUsHero";
 import SectionWrapper from "../components/SectionWrapper";
 import Developer from "../components/aboutUsComp/Developer";
 import Tech from "../components/aboutUsComp/Tech";
-import Thanks from "../components/aboutUsComp/Thanks";
 
 const AboutUs = () => {
   return (
@@ -15,12 +14,8 @@ const AboutUs = () => {
         <Developer />
       </SectionWrapper>
 
-      <SectionWrapper>
-        <Tech />
-      </SectionWrapper>
-
       <SectionWrapper style={{ borderBottom: 'none', marginBottom: 0 }}>
-        <Thanks />
+        <Tech />
       </SectionWrapper>
     </div>
   );
