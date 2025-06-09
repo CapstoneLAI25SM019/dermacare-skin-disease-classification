@@ -1,4 +1,4 @@
-import rosaceaContent from "../../contents/articleContent/rosaceaContent";
+import rosaceaContent from "../../contents/articleContent/RosaceaContent.js";
 
 const Rosacea = () => {
   return (
