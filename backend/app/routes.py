@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 import os
 from werkzeug.utils import secure_filename
-from app.model.predict import predict_disease  # Sudah diperbaiki agar cocok
+from app.model.predict import predict_disease
 
 bp = Blueprint('main', __name__)
 
@@ -26,7 +26,7 @@ def predict():
 
         try:
             prediction = predict_disease(upload_path)
-            return jsonify(prediction)  # Langsung mengembalikan dict hasil prediksi
+            return jsonify(prediction)
         except Exception as e:
             return jsonify({'error': str(e)}), 500
 

@@ -1,13 +1,13 @@
-import cacarAirContent from '../../contents/articleContent/CacarAirContent';
+import kutilContent from "../../contents/articleContent/KutilContent";
 
-const CacarAir = () => {
+const Kutil = () => {
     return (
         <section style={{ padding: '40px 0' }}>
-            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>{cacarAirContent.title}</h2>
+            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>{kutilContent.title}</h2>
 
             <img
-                src={cacarAirContent.image}
-                alt={cacarAirContent.title}
+                src={kutilContent.image}
+                alt={kutilContent.title}
                 style={{
                     display: 'block',
                     maxWidth: '100%',
@@ -18,12 +18,12 @@ const CacarAir = () => {
             />
 
             <p style={{ marginBottom: '20px', textAlign: 'justify' }}>
-                {cacarAirContent.description}
+                {kutilContent.description}
             </p>
 
             <h3>Cara Mengobati:</h3>
             <ul style={{ paddingLeft: '20px' }}>
-                {cacarAirContent.treatment.map((step, index) => (
+                {kutilContent.treatment.map((step, index) => (
                     <li key={index} style={{ marginBottom: '10px' }}>
                         {step}
                     </li>
@@ -33,4 +33,4 @@ const CacarAir = () => {
     );
 };
 
-export default CacarAir;
+export default Kutil;

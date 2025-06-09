@@ -1,5 +1,5 @@
-const kurapContent = {
-    title: "Kurap",
+const lupusContent = {
+    title: "Lupus",
     image: "/cacar_air.jpg",
     description: `Cacar air adalah infeksi virus yang menyebabkan ruam merah gatal yang berubah menjadi lepuhan kecil berisi cairan. Penyakit ini disebabkan oleh virus varicella-zoster dan sangat menular, terutama pada anak-anak.`,
     treatment: [
@@ -11,4 +11,4 @@ const kurapContent = {
     ]
 };
 
-export default kurapContent;
+export default lupusContent;

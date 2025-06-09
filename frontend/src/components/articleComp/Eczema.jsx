@@ -10,8 +10,9 @@ const Eczema = () => {
                 alt={eczemaContent.title}
                 style={{
                     display: 'block',
-                    maxWidth: '100%',
-                    height: 'auto',
+                    width: '500px',      
+                    height: '400px',       
+                    objectFit: 'cover',    
                     margin: '0 auto 20px',
                     borderRadius: '8px'
                 }}
@@ -21,11 +22,39 @@ const Eczema = () => {
                 {eczemaContent.description}
             </p>
 
-            <h3>Cara Mengobati:</h3>
+            <h3>Bentuk Eksim:</h3>
             <ul style={{ paddingLeft: '20px' }}>
-                {eczemaContent.treatment.map((step, index) => (
-                    <li key={index} style={{ marginBottom: '10px' }}>
-                        {step}
+                {eczemaContent.forms.map((item, index) => (
+                    <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+                ))}
+            </ul>
+
+            <h3>Penanganan:</h3>
+            <ul style={{ paddingLeft: '20px' }}>
+                {eczemaContent.treatment.map((item, index) => (
+                    <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+                ))}
+            </ul>
+
+            <h3>Hal yang Harus Dihindari:</h3>
+            <ul style={{ paddingLeft: '20px' }}>
+                {eczemaContent.avoid.map((item, index) => (
+                    <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+                ))}
+            </ul>
+
+            <h3>Kapan Harus Konsultasi ke Dokter:</h3>
+            <ul style={{ paddingLeft: '20px' }}>
+                {eczemaContent.consult.map((item, index) => (
+                    <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+                ))}
+            </ul>
+
+            <h3>Sumber:</h3>
+            <ul style={{ paddingLeft: '20px' }}>
+                {eczemaContent.sources.map((url, index) => (
+                    <li key={index}>
+                        <a href={url} target="_blank" rel="noopener noreferrer">{url}</a>
                     </li>
                 ))}
             </ul>

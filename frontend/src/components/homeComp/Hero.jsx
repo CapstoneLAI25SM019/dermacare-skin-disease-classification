@@ -49,6 +49,8 @@ const Hero = () => {
                     }}
                     onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0059b3'}
                     onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#003f7f'}
+                    onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'} 
+                    onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 >
                     Mulai Deteksi
                 </button>

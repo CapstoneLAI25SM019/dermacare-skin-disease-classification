@@ -3,36 +3,42 @@ from PIL import Image
 import numpy as np
 import os
 
-# Load model saat file ini diimpor
+# Load model
 MODEL_PATH = os.path.join(os.path.dirname(__file__), 'model_klasifikasi_kulit.h5')
 model = tf.keras.models.load_model(MODEL_PATH)
 
-# Daftar label kelas sesuai urutan output model
+# Daftar label kelas
 class_names = [
     'cacar air', 'eczema', 'jerawat', 'kudis', 'kurap',
     'kutil', 'lupus', 'psioriasis', 'rosacea', 'vitiligo'
 ]
 
-def predict_disease(img_path):
+def predict_disease(img_path, top_k=3):
     try:
-        # Baca dan ubah ukuran gambar menggunakan PIL
+        # Baca dan ubah ukuran gambar
         img = Image.open(img_path).convert("RGB")
         img = img.resize((224, 224))
 
-        # Konversi ke array dan preprocessing
+        # Preprocessing
         img_array = np.array(img)
         img_array = tf.keras.applications.mobilenet.preprocess_input(img_array)
         img_array = np.expand_dims(img_array, axis=0)
 
         # Prediksi
         preds = model.predict(img_array)[0]
-        top_class_idx = np.argmax(preds)
-        confidence = float(preds[top_class_idx])
-        prediction = class_names[top_class_idx]
+
+        # Ambil top-k prediksi
+        top_indices = preds.argsort()[-top_k:][::-1]
+        predictions = [
+            {
+                "label": class_names[i],
+                "confidence": round(float(preds[i]), 4)
+            }
+            for i in top_indices
+        ]
 
         return {
-            "prediction": prediction,
-            "confidence": round(confidence, 4)
+            "predictions": predictions
         }
 
     except Exception as e:

@@ -1,0 +1,44 @@
+.toc-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.toc-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(2, auto);
+  gap: 16px 24px;
+  justify-items: center; 
+}
+
+.toc-button {
+  width: 130px; 
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #003f7f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 63, 127, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.toc-button:hover {
+  background-color: #0059b3;
+  transform: scale(1.05);
+}

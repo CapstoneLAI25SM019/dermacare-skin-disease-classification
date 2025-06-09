@@ -1,55 +1,35 @@
 import SectionWrapper from '../components/SectionWrapper';
 import HeroArticle from '../components/articleComp/HeroArticle';
-import CacarAir from '../components/articleComp/CacarAir';
-import Eczema from '../components/articleComp/Eczema';
-import Jerawat from '../components/articleComp/Jerawat';
-import Kudis from '../components/articleComp/Kudis';
-import Kurap from '../components/articleComp/Kurap';
-import Kutil from '../components/articleComp/Kutil';
-import Lupus from '../components/articleComp/Lupus';
-import Psioriasis from '../components/articleComp/Psioriasis';
-import Rosacea from '../components/articleComp/Rosacea';
-import Vitiligo from '../components/articleComp/Vitiligo';
-
+import TableOfContents from '../components/TableOfContents';
+import { articleComponents } from '../contents/articleComponents';
 
 const Article = () => {
-    return (
-        <div className="container">
-            <SectionWrapper>
-                <HeroArticle />
-            </SectionWrapper>
-            <SectionWrapper>
-                <CacarAir />
-            </SectionWrapper>
-            <SectionWrapper>
-                <Eczema />
-            </SectionWrapper>
-            <SectionWrapper>
-                <Jerawat />
-            </SectionWrapper>
-             <SectionWrapper>
-                <Kudis />
-            </SectionWrapper>
-            <SectionWrapper>
-                <Kurap />
-            </SectionWrapper>
-            <SectionWrapper>
-                <Kutil />
-            </SectionWrapper>
-            <SectionWrapper>
-                <Lupus />
-            </SectionWrapper>
-            <SectionWrapper>
-                <Psioriasis />
-            </SectionWrapper>
-             <SectionWrapper>
-                <Rosacea />
-            </SectionWrapper>
-             <SectionWrapper>
-                <Vitiligo />
-            </SectionWrapper>                                     
-        </div>
-    );
+  return (
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem', scrollBehavior: 'smooth' }}>
+      <SectionWrapper>
+        <HeroArticle />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <TableOfContents />
+      </SectionWrapper>
+
+      {articleComponents.map(({ id, Component }, index) => {
+        const isLast = index === articleComponents.length - 1;
+
+        return (
+          <SectionWrapper
+            key={id}
+            style={isLast ? { borderBottom: 'none', marginBottom: 0 } : {}}
+          >
+            <div id={id} style={{ scrollMarginTop: '5rem' }}>
+              <Component />
+            </div>
+          </SectionWrapper>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Article;

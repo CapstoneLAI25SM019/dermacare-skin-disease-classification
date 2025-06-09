@@ -2,84 +2,119 @@ import { useNavigate } from 'react-router-dom';
 import howToUseContent from '../../contents/homeContent/HowToUseContent';
 
 const HowToUse = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    return (
-        <section
-            id="howtouse"
-            style={{
-                padding: '60px 40px',
-                backgroundColor: '#f9fbfc',
-                textAlign: 'center',
-                borderRadius: '20px',
-            }}
+  return (
+    <section
+      id="howtouse"
+      style={{
+        padding: '60px 40px',
+        backgroundColor: '#f9fbfc',
+        borderRadius: '20px',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: '1000px',
+          margin: '0 auto',
+          textAlign: 'center',
+        }}
+      >
+        <h2
+          style={{
+            fontSize: '2rem',
+            marginBottom: '40px',
+            color: '#003f7f',
+          }}
         >
-            <h2 style={{ fontSize: '2rem', color: '#003f7f', marginBottom: '40px' }}>
-                {howToUseContent.title}
-            </h2>
+          {howToUseContent.title}
+        </h2>
 
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+            gap: '80px',
+            justifyItems: 'center',
+            marginBottom: '40px',
+          }}
+        >
+          {howToUseContent.steps.map((step, index) => (
             <div
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                    gap: '30px',
-                    justifyItems: 'center',
-                    marginBottom: '40px',
-                }}
+              key={index}
+              style={{
+                width: '250px',
+                padding: '20px',
+                boxSizing: 'border-box',
+                borderRadius: '16px',
+                backgroundColor: '#e6f0ff',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
+                textAlign: 'left',
+                transition: 'transform 0.2s ease',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             >
-                {howToUseContent.steps.map((step, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            backgroundColor: '#e6f0ff',
-                            padding: '20px',
-                            borderRadius: '16px',
-                            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
-                            maxWidth: '250px',
-                        }}
-                    >
-                        <img
-                            src={step.image}
-                            alt={`Langkah ${index + 1}`}
-                            style={{ width: '80px', marginBottom: '15px' }}
-                        />
-                        <h3 style={{ 
-                            color: '#003f7f' }}>Langkah {index + 1}</h3>
-                        <p style={{ 
-                            fontSize: '1rem', 
-                            color: '#333', 
-                            textAlign: 'justify' 
-                        }}
-                    >
-                            {step.text}
-                        </p>
-                    </div>
-                ))}
+              <img
+                src={step.image}
+                alt={`Langkah ${index + 1}`}
+                style={{
+                  width: '160px',
+                  maxWidth: '100%',
+                  height: 'auto',
+                  marginBottom: '15px',
+                }}
+              />
+              <h4
+                style={{
+                  marginBottom: '10px',
+                  color: '#003f7f',
+                  textAlign: 'center',
+                }}
+              >
+                {step.title}
+              </h4>
+              <p
+                style={{
+                  fontSize: '1rem',
+                  color: '#333',
+                  textAlign: 'justify',
+                  flexGrow: 1,
+                }}
+              >
+                {step.text}
+              </p>
             </div>
+          ))}
+        </div>
 
-            {/* Tombol Coba Sekarang */}
-                <button
-                    onClick={() => navigate('/prediksi')}
-                    style={{
-                        padding: '14px 28px',
-                        fontSize: '1rem',
-                        fontWeight: 'bold',
-                        backgroundColor: '#003f7f',
-                        color: '#fff',
-                        border: 'none',
-                        borderRadius: '10px',
-                        cursor: 'pointer',
-                        boxShadow: '0 4px 12px rgba(0, 63, 127, 0.3)',
-                        transition: 'background-color 0.3s ease'
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0059b3'}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#003f7f'}
-                >
-                    Coba Sekarang
-                </button>
-        </section>
-    );
+        <button
+          onClick={() => navigate('/prediksi')}
+          style={{
+            padding: '14px 28px',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            backgroundColor: '#003f7f',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '10px',
+            cursor: 'pointer',
+            boxShadow: '0 4px 12px rgba(0, 63, 127, 0.3)',
+            transition: 'background-color 0.3s ease',
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0059b3')}
+          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#003f7f')}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+        >
+          Coba Sekarang
+        </button>
+      </div>
+    </section>
+  );
 };
 
 export default HowToUse;

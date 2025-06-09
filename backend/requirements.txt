@@ -2,7 +2,7 @@ Flask
 flask-cors
 numpy==2.0.2
 pandas==2.2.2
-matplotlib==3.10.0
+matplotlib==3.9.4
 seaborn==0.13.2
 pillow==11.2.1
 tensorflow==2.18.0
