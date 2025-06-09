@@ -1,4 +1,4 @@
-import kudisContent from "../../contents/articleContent/kudisContent";
+import kudisContent from "../../contents/articleContent/KudisContent.js";
 
 const Kudis = () => {
   return (
