@@ -1,4 +1,4 @@
-import { footer } from '../contents/FooterContent';
+import { footer } from '../contents/FooterContent.js';
 
 const Footer = () => {
     return (
