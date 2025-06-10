@@ -1,5 +1,5 @@
-import React from 'react';
 import { useDropzone } from 'react-dropzone';
+import './PredictionComp.css';
 
 const ImageDropzone = ({ onDrop }) => {
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -11,13 +11,7 @@ const ImageDropzone = ({ onDrop }) => {
     return (
         <div
             {...getRootProps()}
-            style={{
-                border: '2px dashed #ccc',
-                padding: '80px',
-                textAlign: 'center',
-                cursor: 'pointer',
-                marginBottom: '20px'
-            }}
+            className={`dropzone-container ${isDragActive ? 'active' : ''}`}
         >
             <input {...getInputProps()} />
             {isDragActive ? (

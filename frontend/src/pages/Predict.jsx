@@ -4,6 +4,7 @@ import ImageDropzone from '../components/predictionComp/ImageDropzone';
 import ImagePreview from '../components/predictionComp/ImagePreview';
 import DiseaseComponent from '../components/predictionComp/DiseaseComponent';
 import ResultDisplay from '../components/predictionComp/ResultDisplay';
+import './Predict.css';
 
 const Predict = () => {
   const [image, setImage] = useState(null);
@@ -56,19 +57,8 @@ const Predict = () => {
   const topPrediction = predictions.length > 0 ? predictions[0] : null;
 
   return (
-    <div className="container" style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
-        <h1
-        style={{
-            fontSize: '2.4rem',
-            marginBottom: '20px',
-            color: '#003f7f',
-            lineHeight: '1.2',
-            fontWeight: 'bold',
-            textAlign: 'center',
-        }}
-        >
-        Upload Gambar untuk Prediksi
-        </h1>
+    <div className="predict-container">
+      <h1 className="predict-title">Upload Gambar untuk Prediksi</h1>
 
       {!preview ? (
         <ImageDropzone onDrop={onDrop} />
@@ -77,19 +67,9 @@ const Predict = () => {
       )}
 
       <button
+        className="predict-button"
         onClick={handleSubmit}
         disabled={loading || !image}
-        style={{
-          display: 'block',
-          width: '100%',
-          padding: '10px',
-          backgroundColor: '#003f7f',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: loading || !image ? 'not-allowed' : 'pointer',
-          marginTop: '10px'
-        }}
       >
         {loading ? 'Memproses...' : 'Prediksi'}
       </button>

@@ -22,8 +22,14 @@ const kutilContent = {
     ],
 
     sources: [
-        "https://www.alodokter.com/kutil",
-        "https://www.halodoc.com/kesehatan/kutil"
+        {
+        name: "Alodokter",
+        url: "https://www.alodokter.com/kutil"
+        },
+        {
+        name: "Halodoc",
+        url: "https://www.halodoc.com/kesehatan/kutil"
+        }
     ]
 };
 

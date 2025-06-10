@@ -17,8 +17,14 @@ const kurapContent = {
     ],
 
     sources: [
-        "https://www.who.int/news-room/fact-sheets/detail/ringworm-(tinea)",
-        "https://www.halodoc.com/kesehatan/kurap"
+    {
+      name: "WHO",
+      url: "https://www.who.int/news-room/fact-sheets/detail/ringworm-(tinea)"
+    },
+    {
+      name: "Halodoc",
+      url: "https://www.halodoc.com/kesehatan/kurap"
+    }
     ]
 };
 

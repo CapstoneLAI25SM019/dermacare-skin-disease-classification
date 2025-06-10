@@ -9,6 +9,7 @@ import Lupus from '../articleComp/Lupus';
 import Psoriasis from '../articleComp/Psoriasis';
 import Rosacea from '../articleComp/Rosacea';
 import Vitiligo from '../articleComp/Vitiligo';
+import './PredictionComp.css';
 
 const DiseaseComponent = ({ prediction }) => {
     const diseaseMap = {
@@ -29,14 +30,8 @@ const DiseaseComponent = ({ prediction }) => {
     if (!diseaseInfo) return null;
 
     return (
-        <div style={{
-            marginTop: '30px',
-            backgroundColor: '#e6f0ff',
-            padding: '25px',
-            borderRadius: '12px',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
-        }}>
-            <div style={{ lineHeight: '1.6', fontSize: '1rem' }}>
+        <div className="disease-container">
+            <div className="disease-content">
                 {diseaseInfo}
             </div>
         </div>

@@ -1,89 +1,22 @@
 import featureContent from '../../contents/homeContent/FeatureContent';
+import './HomeComp.css';
 
 const Features = () => {
   return (
-    <section
-      id="features"
-      style={{
-        padding: '60px 40px',
-        backgroundColor: '#f9fbfc',
-        borderRadius: '20px',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-          textAlign: 'center',
-        }}
-      >
-        <h2
-          style={{
-            fontSize: '2rem',
-            marginBottom: '40px',
-            color: '#003f7f',
-          }}
-        >
-          {featureContent.title}
-        </h2>
+    <section id="features" className="features-section">
+      <div className="features-container">
+        <h2 className="features-title">{featureContent.title}</h2>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '80px',
-            justifyItems: 'center',
-            marginBottom: '40px',
-          }}
-        >
+        <div className="features-grid">
           {featureContent.features.map((feature, index) => (
-            <div
-              key={index}
-              style={{
-                width: '250px',
-                padding: '20px',
-                boxSizing: 'border-box',
-                borderRadius: '16px',
-                backgroundColor: '#e6f0ff',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
-                textAlign: 'left',
-                transition: 'transform 0.2s ease',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-            >
+            <div className="feature-card" key={index}>
               <img
                 src={feature.image}
                 alt={`Ikon ${feature.title}`}
-                style={{
-                  width: '160px',
-                  maxWidth: '100%',
-                  height: 'auto',
-                  marginBottom: '15px',
-                }}
+                className="feature-icon"
               />
-              <h4
-                style={{
-                  marginBottom: '10px',
-                  color: '#003f7f',
-                  textAlign: 'center',
-                }}
-              >
-                {feature.title}
-              </h4>
-              <p
-                style={{
-                  fontSize: '1rem',
-                  color: '#333',
-                  textAlign: 'justify',
-                  flexGrow: 1,
-                }}
-              >
-                {feature.text}
-              </p>
+              <h4 className="feature-title">{feature.title}</h4>
+              <p className="feature-text">{feature.text}</p>
             </div>
           ))}
         </div>

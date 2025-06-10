@@ -1,50 +1,58 @@
-import vitiligoContent from "../../contents/articleContent/VitiligoContent.js";
+import vitiligoContent from "../../contents/articleContent/VitiligoContent";
+import "./ArticleComp.css";
 
 const Vitiligo = () => {
   return (
-    <section style={{ padding: '40px 0' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>{vitiligoContent.title}</h2>
+    <section className="article-section">
+      <h2 className="article-title">{vitiligoContent.title}</h2>
 
       <img
         src={vitiligoContent.image}
         alt={vitiligoContent.title}
-        style={{
-          display: 'block',
-          width: '500px',
-          height: '400px',
-          objectFit: 'cover',
-          margin: '0 auto 20px',
-          borderRadius: '8px'
-        }}
+        className="article-image"
       />
 
-      <p style={{ marginBottom: '20px', textAlign: 'justify' }}>
-        {vitiligoContent.description}
-      </p>
+      <p className="article-paragraph">{vitiligoContent.description}</p>
 
-      <h3>Penanganan awal yang dapat dilakukan:</h3>
-      <ul style={{ paddingLeft: '20px' }}>
+      <h3 className="article-subtitle">Penanganan Awal yang Dapat Dilakukan</h3>
+      <ul className="article-list">
         {vitiligoContent.treatment.map((item, index) => (
-          <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+          <li key={index} className="article-list-item">
+            {item}
+          </li>
         ))}
       </ul>
 
-      <h3>Upaya pencegahan:</h3>
-      <ul style={{ paddingLeft: '20px' }}>
+      <h3 className="article-subtitle">Upaya Pencegahan</h3>
+      <ul className="article-list">
         {vitiligoContent.prevention.map((item, index) => (
-          <li key={index} style={{ marginBottom: '10px' }}>{item}</li>
+          <li key={index} className="article-list-item">
+            {item}
+          </li>
         ))}
       </ul>
 
-      <h3>Fakta Menarik:</h3>
-      <p style={{ fontWeight: 'bold', marginBottom: '8px' }}>{vitiligoContent.fact[0]}</p>
-      <p style={{ marginBottom: '20px' }}>{vitiligoContent.fact[1]}</p>
+      <h3 className="article-subtitle">Fakta Menarik</h3>
+      <ul className="article-list">
+        {vitiligoContent.fact.map((item, index) => (
+          <li key={index} className="article-list-item">
+            {item}
+          </li>
+        ))}
+      </ul>
 
-      <h3>Sumber:</h3>
-      <ul style={{ paddingLeft: '20px' }}>
+      <h4 className="article-subtitle">Sumber</h4>
+      <ul className="article-list">
         {vitiligoContent.sources.map((src, index) => (
-          <li key={index} style={{ marginBottom: '10px' }}>
-            <a href={src} target="_blank" rel="noopener noreferrer">{src}</a>
+          <li key={index} className="article-list-item">
+            <a
+              href={src.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="article-link"
+            >
+              {src.name}
+            </a>
           </li>
         ))}
       </ul>

@@ -11,10 +11,16 @@ Penyebab lupus belum diketahui secara pasti, tapi kombinasi dari faktor genetik 
         "Lupus tidak dapat dicegah, tetapi beberapa hal dapat dilakukan untuk menurunkan risiko atau mencegah kambuhnya gejala, seperti menerapkan gaya hidup sehat, menghindari pemicu lupus, dan melakukan kontrol kesehatan ke dokter secara berkala."
     ],
 
-    sources: [
-        "https://www.mayoclinic.org/diseases-conditions/lupus/symptoms-causes/syc-20365789",
-        "https://www.alodokter.com/lupus"
-    ]
+  sources: [
+    {
+      name: "Alodokter",
+      url: "https://www.alodokter.com/lupus"
+    },
+    {
+      name: "Halodoc",
+      url: "https://www.halodoc.com/kesehatan/lupus"
+    }
+  ]
 };
 
 export default lupusContent;

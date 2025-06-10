@@ -23,8 +23,10 @@ const eczemaContent = {
     "Eksim mengganggu tidur, aktivitas sehari-hari, atau tidak membaik setelah perawatan rutin."
   ],
   sources: [
-    "https://ciputrahospital.com/penyakit-kulit-eksim/",
-    "https://www.halodoc.com/kesehatan/dermatitisatopik"
+    {
+      name: "Alodokter",
+      url: "https://www.alodokter.com/eksim"
+    }
   ]
 };
 

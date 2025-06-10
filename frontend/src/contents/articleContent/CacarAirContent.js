@@ -23,7 +23,10 @@ const cacarAirContent = {
     "Cacar air terjadi pada ibu hamil, bayi baru lahir, atau individu dengan sistem imun lemah."
   ],
   sources: [
-    "https://www.halodoc.com/kesehatan/cacar-air/"
+    {
+      name: "Halodoc",
+      url: "https://www.halodoc.com/kesehatan/cacar-air/"
+    }
   ]
 };
 

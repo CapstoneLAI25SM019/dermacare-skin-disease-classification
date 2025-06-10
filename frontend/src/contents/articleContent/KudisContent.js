@@ -25,9 +25,15 @@ const kudisContent = {
     "Anggota keluarga lain mulai menunjukkan gejala serupa.",
   ],
   sources: [
-    "https://www.mitrakeluarga.com/artikel/kudis-atau-skabies",
-    "https://www.halodoc.com/kesehatan/kudis#h-pengobatan-kudis",
-  ],
+    {
+      name: "Halodoc",
+      url: "https://www.halodoc.com/kesehatan/kudis"
+    },
+    {
+      name: "Alodokter",
+      url: "https://www.alodokter.com/kudis"
+    }
+  ]
 };
 
 export default kudisContent;

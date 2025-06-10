@@ -1,4 +1,4 @@
-const kudisContent = {
+const jerawatContent = {
   title: "Jerawat (Acne Vulgaris)",
   image: "/jerawat.jpg",
   description:
@@ -23,10 +23,15 @@ const kudisContent = {
     "Sudah coba berbagai cara tapi tidak membaik.",
   ],
   sources: [
-    "https://www.alodokter.com/acne-vulgaris-jenis-penyebab-dan-penanganan",
-    "https://www.halodoc.com/artikel/jerawat-matang-jangan-dipencet-ini-tips-mengatasinya",
-    "https://lifestyle.kompas.com/read/2025/04/29/090500620/jerawat-tak-kunjung-sembuh-kapan-harus-ke-dokter-",
-  ],
+    {
+      name: "Halodoc",
+      url: "https://www.halodoc.com/kesehatan/jerawat"
+    },
+    {
+      name: "Alodokter",
+      url: "https://www.alodokter.com/jerawat"
+    }
+  ]
 };
 
-export default kudisContent;
+export default jerawatContent;

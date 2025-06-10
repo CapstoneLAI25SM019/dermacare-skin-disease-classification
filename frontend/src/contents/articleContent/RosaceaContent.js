@@ -24,7 +24,12 @@ const rosaceaContent = {
     "Rosacea bukan alergi biasa.",
     "Rosacea adalah kondisi kronis pada kulit wajah dan bisa memburuk jika tidak dikendalikan, tetapi gejalanya dapat dikelola dengan baik.",
   ],
-  sources: ["https://www.halodoc.com/kesehatan/rosacea"],
+  sources: [
+    { 
+      name: "Halodoc", 
+      url: "https://www.halodoc.com/kesehatan/rosacea" 
+    }
+  ]
 };
 
 export default rosaceaContent;

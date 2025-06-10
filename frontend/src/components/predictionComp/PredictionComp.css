@@ -1,0 +1,102 @@
+/* ==========================================
+   PREDICTION RESULT STYLING
+========================================== */
+.disease-container {
+  margin-top: 30px;
+  background-color: #e6f0ff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.disease-content {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsif - Prediction Result */
+@media screen and (max-width: 768px) {
+  .disease-container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .disease-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================
+   DROPZONE STYLING
+========================================== */
+.dropzone-container {
+  border: 2px dashed #ccc;
+  padding: 80px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-color: #f9fbfc;
+}
+
+.dropzone-container.active {
+  border-color: #003f7f;
+  background-color: #e6f0ff;
+}
+
+/* Responsif - Dropzone */
+@media screen and (max-width: 768px) {
+  .dropzone-container {
+    padding: 40px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================
+   IMAGE PREVIEW STYLING
+========================================== */
+.image-preview-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 2px solid #000;
+}
+
+.remove-image-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ff4d4d;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  text-align: center;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.remove-image-button:hover {
+  background: #cc0000;
+}
+
+/* Responsif - Image Preview */
+@media screen and (max-width: 768px) {
+  .image-preview {
+    max-height: 200px;
+  }
+}

@@ -1,0 +1,480 @@
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background-color: #e6f0ff;
+  border-radius: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #003f7f;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hero-button {
+  padding: 14px 56px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #003f7f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 63, 127, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0059b3;
+  transform: scale(1.02);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+/* Responsive Hero */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+    margin-top: 20px;
+  }
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background-color: white;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003f7f;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive About */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .about-image img {
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 40px;
+  background-color: #f9fbfc;
+  border-radius: 20px;
+}
+
+.features-container {
+  max-width: 1200px; /* Revisi dari 1000px */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #003f7f;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #e6f0ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
+}
+
+.feature-icon {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  margin-bottom: 10px;
+  color: #003f7f;
+  text-align: center;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+/* Responsive Features */
+@media screen and (max-width: 768px) {
+  .features-section {
+    padding: 40px 20px;
+  }
+
+  .features-title {
+    font-size: 1.5rem;
+  }
+
+  .features-grid {
+    gap: 24px;
+  }
+
+  .feature-card {
+    padding: 16px;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
+
+  .feature-text {
+    font-size: 0.95rem;
+  }
+
+  .feature-icon {
+    width: 120px;
+  }
+}
+
+/* How To Use Section */
+.howtouse-section {
+  padding: 60px 40px;
+  background-color: #f9fbfc;
+  border-radius: 20px;
+}
+
+.howtouse-container {
+  max-width: 1200px; /* Revisi dari 1000px */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.howtouse-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #003f7f;
+}
+
+.howtouse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.howtouse-card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #e6f0ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.howtouse-card:hover {
+  transform: scale(1.02);
+}
+
+.howtouse-icon {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.howtouse-step-title {
+  margin-bottom: 10px;
+  color: #003f7f;
+  text-align: center;
+}
+
+.howtouse-step-text {
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+/* CTA Button */
+.howtouse-button {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #003f7f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 63, 127, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.howtouse-button:hover {
+  background-color: #003f7f;
+  transform: scale(1.02);
+}
+
+/* Responsive How To Use */
+@media screen and (max-width: 768px) {
+  .howtouse-section {
+    padding: 40px 20px;
+  }
+
+  .howtouse-title {
+    font-size: 1.5rem;
+  }
+
+  .howtouse-grid {
+    gap: 24px;
+  }
+
+  .howtouse-card {
+    padding: 16px;
+  }
+
+  .howtouse-step-title {
+    font-size: 1.1rem;
+  }
+
+  .howtouse-step-text {
+    font-size: 0.95rem;
+  }
+
+  .howtouse-icon {
+    width: 120px;
+  }
+
+  .howtouse-button {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Container umum */
+.features-container,
+.howtouse-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Judul section */
+.features-title,
+.howtouse-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Grid default: 4 kolom */
+.features-grid,
+.howtouse-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* Kartu fitur dan langkah */
+.feature-card,
+.howtouse-card {
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover,
+.howtouse-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ikon dan teks */
+.feature-icon,
+.howtouse-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.feature-title,
+.howtouse-step-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.feature-text,
+.howtouse-step-text {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Tombol di HowToUse */
+.howtouse-button {
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.howtouse-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Tablet: 2 kolom */
+@media (max-width: 1024px) {
+  .features-grid,
+  .howtouse-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive Mobile: 1 kolom */
+@media (max-width: 600px) {
+  .features-grid,
+  .howtouse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-title,
+  .howtouse-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-card,
+  .howtouse-card {
+    padding: 20px;
+  }
+
+  .feature-icon,
+  .howtouse-icon {
+    width: 48px;
+    height: 48px;
+  }
+}

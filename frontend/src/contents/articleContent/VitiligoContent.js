@@ -16,8 +16,11 @@ const vitiligoContent = {
     "Hingga saat ini belum ada obat yang dapat menyembuhkan vitiligo secara permanen. Sekitar 30 persen penderita vitiligo memiliki riwayat keluarga yang juga memiliki kondisi serupa atau penyakit autoimun lain. Banyak pengidap vitiligo mengalami penurunan kepercayaan diri, kecemasan sosial, dan depresi karena perubahan penampilan fisik yang dialami. Sebagian besar kasus vitiligo dimulai pada usia muda, rata-rata penderitanya berusia sebelum 20 tahun. Vitiligo tidak menular.",
   ],
   sources: [
-    "https://www.halodoc.com/kesehatan/vitiligo",
-  ],
+    {
+      name: "Halodoc",
+      url: "https://www.halodoc.com/kesehatan/vitiligo"
+    }
+  ]
 };
 
 export default vitiligoContent;
