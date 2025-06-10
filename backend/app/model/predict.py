@@ -16,7 +16,7 @@ class_names = [
     'kurap',
     'kutil', 
     'lupus', 
-    'psioriasis', 
+    'psoriasis', 
     'rosacea', 
     'vitiligo'
 ]
