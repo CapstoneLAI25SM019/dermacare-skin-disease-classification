@@ -1,63 +1,78 @@
-/* HERO SECTION */
+/* About Hero Section */
 .about-hero-section {
-  padding: 60px 0;
+  padding: 50px 16px;
   text-align: center;
 }
 
 .about-hero-title {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
   color: #003f7f;
   line-height: 1.2;
   font-weight: bold;
+  word-wrap: break-word; /* Prevent title overflow */
 }
 
 .about-hero-description {
-  font-size: 1.25rem;
-  max-width: 900px;
-  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
   color: #555;
   white-space: pre-line;
+  padding: 0 12px;
 }
 
 .about-hero-image {
-  width: 500px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   display: block;
 }
 
-/* ✅ RESPONSIF */
+/* Responsive About Hero */
 @media screen and (max-width: 768px) {
+  .about-hero-section {
+    padding: 40px 12px;
+  }
+
   .about-hero-title {
     font-size: 1.8rem;
   }
 
   .about-hero-description {
-    font-size: 1.05rem;
-    padding: 0 20px;
+    font-size: 0.95rem;
+    padding: 0 16px;
   }
 
   .about-hero-image {
-    width: 90%;
+    max-width: 300px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 335px) {
+  .about-hero-section {
+    padding: 30px 10px;
+  }
+
   .about-hero-title {
     font-size: 1.5rem;
   }
 
   .about-hero-description {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    padding: 0 10px;
+  }
+
+  .about-hero-image {
+    max-width: 250px;
   }
 }
 
-/* DEVELOPER SECTION */
+/* Developer Section */
 .developer-section {
-  padding: 60px 40px;
+  padding: 50px 20px;
   background-color: #f9fbfc;
-  border-radius: 20px;
+  border-radius: 16px;
 }
 
 .developer-container {
@@ -67,23 +82,23 @@
 }
 
 .developer-title {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
   color: #003f7f;
   font-weight: 700;
 }
 
 .developer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   justify-content: center;
-  justify-items: stretch;
+  justify-items: center;
 }
 
 .developer-card {
-  padding: 25px 20px;
-  border-radius: 16px;
+  padding: 20px 16px;
+  border-radius: 12px;
   background-color: #e6f0ff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -92,8 +107,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  max-width: 280px;
+  gap: 10px;
+  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -103,28 +118,28 @@
 
 .developer-name {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #003f7f;
   margin-bottom: 4px;
 }
 
 .developer-role {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .developer-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  font-size: 1.5rem;
+  gap: 16px;
+  font-size: 1.25rem;
 }
 
 .developer-icon-link {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .developer-icon-link img {
@@ -132,34 +147,81 @@
   height: 100%;
 }
 
-/* ✅ RESPONSIVE */
+/* Responsive Developer */
 @media screen and (max-width: 768px) {
+  .developer-section {
+    padding: 40px 16px;
+  }
+
   .developer-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
   }
 
   .developer-card {
-    padding: 20px 16px;
+    padding: 16px 12px;
+    max-width: 220px;
   }
 
   .developer-name {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .developer-role {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   .developer-icons {
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .developer-icon-link {
+    width: 18px;
+    height: 18px;
   }
 }
 
+@media screen and (max-width: 335px) {
+  .developer-section {
+    padding: 30px 12px;
+  }
+
+  .developer-title {
+    font-size: 1.5rem;
+  }
+
+  .developer-grid {
+    gap: 16px;
+  }
+
+  .developer-card {
+    padding: 12px 10px;
+    max-width: 200px;
+  }
+
+  .developer-name {
+    font-size: 0.9rem;
+  }
+
+  .developer-role {
+    font-size: 0.8rem;
+  }
+
+  .developer-icons {
+    gap: 10px;
+  }
+
+  .developer-icon-link {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Tech Section */
 .tech-section {
-  padding: 60px 40px;
+  padding: 50px 20px;
   background-color: #f9fbfc;
-  border-radius: 20px;
+  border-radius: 16px;
 }
 
 .tech-container {
@@ -169,27 +231,27 @@
 }
 
 .tech-title {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
   color: #003f7f;
   font-weight: 700;
 }
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
   justify-items: center;
 }
 
 .tech-card {
-  width: 180px;
-  padding: 20px;
-  border-radius: 16px;
+  width: 160px;
+  padding: 16px;
+  border-radius: 12px;
   background-color: #e6f0ff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #003f7f;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -197,7 +259,7 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  gap: 12px;
+  gap: 10px;
 }
 
 .tech-card:hover {
@@ -205,26 +267,55 @@
 }
 
 .tech-icon {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
-/* ✅ Responsive text for small screens */
+/* Responsive Tech */
 @media screen and (max-width: 768px) {
+  .tech-section {
+    padding: 40px 16px;
+  }
+
   .tech-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
   }
 
   .tech-card {
-    width: 100%;
-    padding: 16px;
-    font-size: 1rem;
+    width: 140px;
+    padding: 12px;
+    font-size: 0.9rem;
   }
 
   .tech-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .tech-section {
+    padding: 30px 12px;
+  }
+
+  .tech-title {
+    font-size: 1.5rem;
+  }
+
+  .tech-grid {
+    gap: 16px;
+  }
+
+  .tech-card {
+    width: 120px;
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .tech-icon {
+    width: 32px;
+    height: 32px;
   }
 }

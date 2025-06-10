@@ -9,25 +9,28 @@ model = tf.keras.models.load_model(MODEL_PATH)
 
 # Daftar label kelas
 class_names = [
-    'cacar air', 'eczema', 'jerawat', 'kudis', 'kurap',
-    'kutil', 'lupus', 'psioriasis', 'rosacea', 'vitiligo'
+    'cacar air', 
+    'eczema', 
+    'jerawat', 
+    'kudis', 
+    'kurap',
+    'kutil', 
+    'lupus', 
+    'psioriasis', 
+    'rosacea', 
+    'vitiligo'
 ]
 
-def predict_disease(img_path, top_k=3):
+def predict_disease(img, top_k=3):
     try:
-        # Baca dan ubah ukuran gambar
-        img = Image.open(img_path).convert("RGB")
         img = img.resize((224, 224))
 
-        # Preprocessing
         img_array = np.array(img)
         img_array = tf.keras.applications.mobilenet.preprocess_input(img_array)
         img_array = np.expand_dims(img_array, axis=0)
 
-        # Prediksi
         preds = model.predict(img_array)[0]
 
-        # Ambil top-k prediksi
         top_indices = preds.argsort()[-top_k:][::-1]
         predictions = [
             {
@@ -37,11 +40,8 @@ def predict_disease(img_path, top_k=3):
             for i in top_indices
         ]
 
-        return {
-            "predictions": predictions
-        }
+        return {"predictions": predictions}
 
     except Exception as e:
-        return {
-            "error": str(e)
-        }
+        return {"error": str(e)}
+
