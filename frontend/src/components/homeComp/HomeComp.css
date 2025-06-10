@@ -14,7 +14,7 @@
 .hero-text {
   flex: 1;
   min-width: 260px;
-  text-align: center;
+  padding-left: 30px;
 }
 
 .hero-text h1 {
@@ -24,6 +24,7 @@
   line-height: 1.2;
   font-weight: bold;
   word-wrap: break-word;
+  text-align: left;
 }
 
 .hero-text p {
@@ -154,7 +155,7 @@
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
-  text-align: center;
+  text-align:justify;
 }
 
 /* Responsive About */
