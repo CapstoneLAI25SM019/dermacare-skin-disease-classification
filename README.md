@@ -81,62 +81,62 @@ dermacare
 ## 5. Cara Install Aplikasi
 
 ### 5.1 Clone Repository
-1. Clone repository yang sudah menyertakan source code, dataset, dan model:
+- Clone repository yang sudah menyertakan source code, dataset, dan model:
    ```bash
    git clone https://github.com/CapstoneLAI25SM019/dermacare-skin-disease-classification.git
    cd dermacare-skin-disease-classification
    ```
 
 ### 5.2 Setup Backend (Flask)
-1. Masuk ke direktori backend:
+- Masuk ke direktori backend:
    ```bash
    cd backend
    ```
-2. (Opsional) Buat virtual environment untuk isolasi dependensi:
+- (Opsional) Buat virtual environment untuk isolasi dependensi:
    ```bash
    python -m venv env
    source env/bin/activate  # Linux/macOS
    # env\Scripts\activate.bat  # Windows
    ```
-3. Install dependensi Python yang diperlukan:
+- Install dependensi Python yang diperlukan:
    ```bash
    pip install -r requirements.txt
    ```
-4. Jalankan aplikasi Flask:
+- Jalankan aplikasi Flask:
    ```bash
    python run.py
    ```
-5. Pastikan server berjalan di `http://127.0.0.1:5000`. Catat URL endpoint API (misalnya, `http://127.0.0.1:5000/api/predict`) untuk digunakan di konfigurasi frontend.
+- Pastikan server berjalan di `http://127.0.0.1:5000`. Catat URL endpoint API (misalnya, `http://127.0.0.1:5000/api/predict`) untuk digunakan di konfigurasi frontend.
 
 ### 5.3 Setup Frontend (React + Vite)
-1. Masuk ke direktori frontend:
+- Masuk ke direktori frontend:
    ```bash
    cd ../frontend
    ```
-2. Install Node.js (v18+) jika belum terinstall. Unduh dari [nodejs.org](https://nodejs.org).
-3. Install dependensi frontend:
+- Install Node.js (v18+) jika belum terinstall. Unduh dari [nodejs.org](https://nodejs.org).
+- Install dependensi frontend:
    ```bash
    npm install
    ```
-4. Buat file `.env` di direktori `frontend/` dan tambahkan URL API dari backend:
+- Buat file `.env` di direktori `frontend/` dan tambahkan URL API dari backend:
    ```plaintext
    VITE_API_URL=http://127.0.0.1:5000/api/predict
    ```
-5. Build proyek (opsional, untuk production):
+- Build proyek (opsional, untuk production):
    ```bash
    npm run build
    ```
-6. Jalankan aplikasi dalam mode development:
+- Jalankan aplikasi dalam mode development:
    ```bash
    npm run dev
    ```
 
 ### 5.4 Setup API
-1. Pastikan backend sudah berjalan sebelum menjalankan frontend.
-2. URL API (misalnya, `http://127.0.0.1:5000/api/predict`) harus sesuai dengan endpoint yang disediakan oleh backend.
-3. Konfigurasi `VITE_API_URL` di file `.env` pada frontend harus mencerminkan URL endpoint backend yang benar.
+- Pastikan backend sudah berjalan sebelum menjalankan frontend.
+- URL API (misalnya, `http://127.0.0.1:5000/api/predict`) harus sesuai dengan endpoint yang disediakan oleh backend.
+- Konfigurasi `VITE_API_URL` di file `.env` pada frontend harus mencerminkan URL endpoint backend yang benar.
 
 ### 5.5 Mengakses Website
-1. Setelah backend dan frontend berjalan dengan benar serta API telah dikonfigurasi, buka browser.
-2. Akses `http://localhost:5173` untuk melihat aplikasi Dermacare.
-3. Website siap digunakan untuk prediksi penyakit kulit berbasis gambar. Unggah gambar kulit melalui antarmuka web untuk mendapatkan hasil prediksi beserta informasi penyakit, gejala, dan saran penanganan.
+- Setelah backend dan frontend berjalan dengan benar serta API telah dikonfigurasi, buka browser.
+- Akses `http://localhost:5173` untuk melihat aplikasi Dermacare.
+- Website siap digunakan untuk prediksi penyakit kulit berbasis gambar. Unggah gambar kulit melalui antarmuka web untuk mendapatkan hasil prediksi beserta informasi penyakit, gejala, dan saran penanganan.
