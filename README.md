@@ -1,7 +1,7 @@
 # Dermacare App
 
 ## 1. Deskripsi Proyek
-Dermacare App adalah solusi web berbasis deep learning yang membantu pengguna mengenali penyakit kulit secara mandiri melalui analisis gambar. Selain deteksi otomatis, sistem ini menyediakan informasi tentang penyakit kulit, gejala umum, dan saran penanganan awal. Aplikasi ini menggunakan **React + Vite** untuk frontend dan **Flask** untuk backend, dengan model deep learning yang diintegrasikan untuk klasifikasi penyakit kulit.
+Dermacare App adalah solusi web berbasis deep learning yang membantu pengguna mengenali penyakit kulit secara mandiri melalui analisis gambar. Selain fitur utama di atas, tersedia juga fitur Artikel yang menyajikan informasi dasar mengenai 10 jenis penyakit kulit, seperti Cacar Air, Eczema, Jerawat, Kudis, Kurap, Kutil, Lupus, Psoriasis, Rosacea, dan Vitiligo yang dapat memberikan edukasi bagi pengguna sebelum atau sesudah melakukan prediksi. Aplikasi ini menggunakan **React + Vite** untuk frontend dan **Flask** untuk backend, dengan model deep learning yang diintegrasikan untuk klasifikasi penyakit kulit. 
 
 ## 2. Dataset
 Dataset untuk proyek ini dikumpulkan dari berbagai sumber terpercaya dan disatukan dalam satu repository. Dataset mencakup gambar penyakit kulit berikut, dengan tautan langsung ke sumbernya:
